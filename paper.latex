@@ -1,19 +1,20 @@
-% A philosophy academic paper template.
+% A philosophy academic paper template. {{{1
 % Copyright 2012 Tom Vincent <http://tlvince.com/contact/>
 % Based on work by Charlie Tanksley:
 % http://www.charlietanksley.net/philtex/primarily-pandoc/
+% vim: fdm=marker
 
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
 
-% Fonts
+% Fonts {{{1
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{libertine}
 
-% Header and footer
+% Header and footer {{{1
 \usepackage{fancyhdr}
 \usepackage[medium]{titlesec}
 \pagestyle{fancy}
@@ -21,11 +22,11 @@
 \lfoot{\textsc{$author$}}\cfoot{}\rfoot{\textsc{$title$} | \thepage}
 \renewcommand{\headrulewidth}{0.0pt}
 
-% Line spacing
+% Line spacing {{{1
 \usepackage{setspace}
 \onehalfspacing
 
-% Article info
+% Article info {{{1
 \usepackage[breaklinks=true,linktocpage,pdftitle={$title$},pdfauthor={$for(author)$$author$$sep$; $endfor$},colorlinks]{hyperref}
 $if(numbersections)$
 $else$
@@ -35,6 +36,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+% Fetch the document {{{1
 $if(title)$
 \title{$title$}
 $endif$
