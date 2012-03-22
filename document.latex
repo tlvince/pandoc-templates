@@ -9,7 +9,7 @@
   \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
   \setromanfont{Georgia}
   \setsansfont{Arial}
-  \setmonofont{Bitstream Vera Sans Mono}
+  \setmonofont{DejaVu Sans Mono}
 \else
   \usepackage[mathletters]{ucs}
   \usepackage[utf8x]{inputenc}
