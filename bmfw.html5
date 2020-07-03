@@ -6,7 +6,7 @@
     $for(author-meta)$
     <meta name="author" content="$author-meta$" />
     $endfor$ $if(date-meta)$
-    <meta name="dcterms.date" content="$date-meta$" />
+    <meta name="article:published_time" content="$date-meta$" />
     $endif$ $if(keywords)$
     <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
     $endif$
@@ -18,11 +18,14 @@
         padding: 0 0.62em;
         max-width: 35em;
       }
-      pre {
-        overflow: auto;
+      header h1 {
+        margin-bottom: 0;
       }
       img {
         cursor: zoom-in;
+      }
+      pre {
+        overflow: auto;
       }
       @media (max-width: 35em) {
         img {
@@ -58,10 +61,10 @@
       <h1>$title$</h1>
       $if(subtitle)$
       <p>$subtitle$</p>
-      $endif$ $for(author)$
-      <p>$author$</p>
-      $endfor$ $if(date)$
-      <time>$date$</time>
+      $endif$ $if(date)$
+      <small>
+        <time>$date$</time>
+      </small>
       $endif$
     </header>
     $endif$ $if(toc)$
